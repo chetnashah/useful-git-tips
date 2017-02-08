@@ -1,0 +1,100 @@
+
+
+
+Vim :
+Vundle is a reasonable plugin manager
+
+Vim scripting
+Comments start with "
+
+Commands starting with : are known as commands
+and run in command mode (mini-buffer)
+most useful is :help help-topic
+
+What you can do in normal mode with :set,
+you can do in vimscript with set
+
+e.g.
+option number
+:set number "shows line number
+:set relativenumber " shows relative number
+
+Toggling option
+:set number!
+
+Query option with ?
+:set number?
+
+other useful options
+1. numberwidth : number of spaces to use for line number
+2. turn on syntax highlighting with :syntax on
+
+If you need a variable, variables are created using let
+
+statement : 
+let name = "Richard Guay"  " Set my name in to the name variable
+
+You can access this variable in command mode using 
+:echo name
+
+You can treat options as variables by prefixing them with &
+e.g.
+:echo &numberwidth
+
+All variables have their scope as well
+e.g.
+b: buffer scope
+w: window schope
+t: tab page scope
+g: global scope
+l: local scope, available locally to function that defined it.
+s: source scope, available within sourced file
+a: argument scope, available within the function
+v: global scope
+
+Vim's configuration can use a full fledged programming
+language known as vimscript
+
+In vimscript you can define functions like so
+
+function TNumber()
+  set number!
+endfunc
+
+A function is run with :call command i.e.
+:call TNumber()
+
+To make a function definition overriding existing function,
+use function!
+
+function! NoNumber()
+  set nonumber
+endfunc
+
+Functions with arguments
+
+function! Hi( name )
+  echo "Hello" a:name
+endfunc
+
+and call it with
+:call Hi( "Richard" )
+
+One of the things that make editors very powerful is 
+seting up key-bindings to arbitrary useful functions.
+
+e.g. 
+map <c-t> :call TNumber()<cr>
+
+will bind Ctrl-T to Toggle Number, neat isn't it?
+
+You can also have modewise mappings using
+nmap for normal mode map
+vmap for visual mode map
+imap for insert mode map
+
+Spacemacs :
+
+Use layers for configuration
+For configuring emacs, need to learn emacs lisp
+
