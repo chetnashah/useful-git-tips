@@ -1,6 +1,6 @@
 
-* Remember: git push <REMOTENAME> <BRANCHNAME>
-* Remember: git pull <REMOTENAME> <BRANCHNAME>
+* Remember: git push REMOTENAME BRANCHNAME
+* Remember: git pull REMOTENAME BRANCHNAME
 * Remember: git rebase base-branch feature-branch 
 ( feature branch commits are moved on top of base-branch,
 if feature branch is not specified, currently checkoud branch's commits
@@ -35,3 +35,5 @@ are moved on top of base-branch)
     git merge upstream/master or
     rebase master on top of upstream/master
     i.e. git rebase upstream/master
+* The changes are still only in your local master, So do not forget to
+push to github (origin/master) by git push origin master
