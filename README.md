@@ -1,4 +1,6 @@
 
+* Use liquid prompt in shell to get status
+
 * Remember: git push REMOTENAME BRANCHNAME
 * Remember: git pull REMOTENAME BRANCHNAME
 * Remember: git rebase base-branch feature-branch 
@@ -37,3 +39,22 @@ are moved on top of base-branch)
     i.e. git rebase upstream/master
 * The changes are still only in your local master, So do not forget to
 push to github (origin/master) by git push origin master
+
+### Git configuration
+
+* Your git configuration file (.gitconfig) usually sits in 
+Home directory (~)
+
+* You can add aliases to your .gitconfig which can be called with
+git aliasname
+
+```
+git config --global alias.ls 'log --oneline'
+```
+e.g. now you can do $ git ls
+
+* Another useful is to see last commit
+```
+git config --global alias.last 'log -1 HEAD'
+
+
