@@ -5,14 +5,14 @@
 * Remember: git pull REMOTENAME BRANCHNAME
 * Remember: git rebase base-branch feature-branch 
 * Remember: git merge otherbranchname : merges otherbranch into currently checkouted branch.
-( feature branch commits are moved on top of base-branch,
+* ( feature branch commits are moved on top of base-branch,
 if feature branch is not specified, currently checkoud branch's commits
 are moved on top of base-branch)
 * git pull = git fetch + git merge
 * Be aware of merge strategies
 * Use git reset to unstage files
 * use git revert to undo a commit by creating a new commit.
-* Rewrite history/squashing/splitting only on feature branches. Do not rebase pushed branches because this rewrites history for other people working on the project.
+* Rewrite history/squashing/splitting only on feature branches. Do not rebase pushed/public  branches because this rewrites history for other people working on the project.
 * Instead of merging master into feature branch, keep rebasing feature
   on top of master
 * Always use git cherry-pick with -n so it won't commit right away.
