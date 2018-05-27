@@ -1,6 +1,6 @@
 
 * Use liquid prompt in shell to get status
-
+* Renaming while cloning: `git clone <RepoUrl> <DestinationDirectory>`
 * Remember: git push REMOTENAME BRANCHNAME
 * Remember: git pull REMOTENAME BRANCHNAME
 * Remember: git rebase base-branch feature-branch 
